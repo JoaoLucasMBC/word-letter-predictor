@@ -54,3 +54,5 @@ As soon as you have the probabilities generated, you can use the N-gram model in
 - [Improving Dwell-Based Gaze Typing with Dynamic, Cascading Dwell Times](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/cascading_dwell.pdf)
 
 - [100k most frequent words](https://gist.github.com/h3xx/1976236)
+
+- [Neural Network for Word Prediction](https://github.com/Kyubyong/word_prediction)

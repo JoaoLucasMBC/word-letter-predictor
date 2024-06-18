@@ -1,7 +1,7 @@
 #/usr/bin/python2
 # coding: utf-8
 '''
-CREDITS: 
+CREDITS: https://github.com/Kyubyong/word_prediction
 
 Builds an English news corpus from wikinews.
 Feel free to use a prebuilt one such as reuter in nltk if you want,
