@@ -2,7 +2,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string jsonFilePath = "../data/probs.json";
+        string jsonFilePath = "../../data/out/probs.json";
         NgramModel model = new NgramModel(jsonFilePath);
         int N = 4;
 
