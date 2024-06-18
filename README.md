@@ -4,7 +4,7 @@ This project includes scripts and instructions for working with an N-gram model 
 
 ## Generating JSON Data
 
-To generate the JSON data for the N-gram model and test it in a simple way, you must run the Python Notebook [`n-gram-model`](n-gram-model.ipynb).
+To generate the JSON data for the N-gram model and test it in a simple way, you must run the Python Notebook [`n-gram-model`](/letter-prediction/letter-n-gram.ipynb).
 
 To be ready to go, follow theese steps:
 
@@ -21,7 +21,7 @@ To be ready to go, follow theese steps:
 
 ## C# API Instructions
 
-As soon as you have the probabilities generated, you can use the N-gram model in a C# project with the API found in [`/NgramModel`](/NgramModel/). Follow these steps:
+As soon as you have the probabilities generated, you can use the N-gram model in a C# project with the API found in [`/NgramModel`](/letter-prediction/NgramModel/). Follow these steps:
 
 1. Import `NgramModel.cs` into your C# project.
 2. Ensure that the correct path to the JSON file is provided when creating an instance of `NgramModel`.
@@ -49,3 +49,8 @@ As soon as you have the probabilities generated, you can use the N-gram model in
 - [Enhancing Hybrid Eye Typing Interfaces with Word and Letter Prediction: A Comprehensive Evaluation](https://arxiv.org/abs/2312.08731)
 - [Speech and Language Processing (Chapter 3: N-gram Models)](https://web.stanford.edu/~jurafsky/slp3/3.pdf)
 - [Introduction to Markov Chains](https://brilliant.org/wiki/markov-chains/)
+
+- [An Inflected-Sensitive Letter and Word Prediction System](https://www.researchgate.net/profile/Carlo-Aliprandi/publication/228527942_An_Inflected-Sensitive_Letter_and_Word_Prediction_System/links/54608f210cf2c1a63bfdfaef/An-Inflected-Sensitive-Letter-and-Word-Prediction-System.pdf)
+- [Improving Dwell-Based Gaze Typing with Dynamic, Cascading Dwell Times](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/cascading_dwell.pdf)
+
+- [100k most frequent words](https://gist.github.com/h3xx/1976236)
