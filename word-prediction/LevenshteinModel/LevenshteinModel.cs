@@ -73,7 +73,7 @@ public class LevenshteinModel
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
-                int cost = s[i - 1] == t[j - 1] ? 0 : replaceCost;
+                double cost = s[i - 1] == t[j - 1] ? 0 : replaceCost;
                 dp[i, j] = Math.Min(dp[i - 1, j] + deleteCost, Math.Min(dp[i, j - 1] + addCost, dp[i - 1, j - 1] + cost));
             }
         }
