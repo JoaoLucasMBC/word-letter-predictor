@@ -9,11 +9,17 @@ public class LevenshteinModel
 
     private Dictionary<string, int> vocab;
     private int maxFreq;
+    private double addCost;
+    private double deleteCost;
+    private double replaceCost;
 
-    public LevenshteinModel(string filePath)
+    public LevenshteinModel(string filePath, double addCost = 0.75, double deleteCost = 1, double replaceCost = 1)
     {
         vocab = new Dictionary<string, int>();
         ReadVocab(filePath);
+        this.addCost = addCost;
+        this.deleteCost = deleteCost;
+        this.replaceCost = replaceCost;
     }
 
     public Dictionary<string, int> Vocab
@@ -52,10 +58,10 @@ public class LevenshteinModel
         return topWords;
     }
 
-    private int LevenshteinDistance(string s, string t) {
+    private double LevenshteinDistance(string s, string t) {
         int n = s.Length;
         int m = t.Length;
-        int[,] dp = new int[n + 1, m + 1];
+        double[,] dp = new double[n + 1, m + 1];
 
         for (int i = 0; i <= n; i++) {
             dp[i, 0] = i;
@@ -67,8 +73,8 @@ public class LevenshteinModel
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
-                int cost = s[i - 1] == t[j - 1] ? 0 : 1;
-                dp[i, j] = Math.Min(dp[i - 1, j] + 1, Math.Min(dp[i, j - 1] + 1, dp[i - 1, j - 1] + cost));
+                int cost = s[i - 1] == t[j - 1] ? 0 : replaceCost;
+                dp[i, j] = Math.Min(dp[i - 1, j] + deleteCost, Math.Min(dp[i, j - 1] + addCost, dp[i - 1, j - 1] + cost));
             }
         }
 
